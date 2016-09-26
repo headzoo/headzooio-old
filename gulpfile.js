@@ -1,29 +1,32 @@
 'use strict';
 
-const _            = require('lodash');
-const fs           = require('fs-extra');
-const path         = require('path');
-const gulp         = require('gulp');
-const gulpif       = require('gulp-if');
-const del          = require('del');
-const changed      = require('gulp-changed');
-const eslint       = require('gulp-eslint');
-const livereload   = require('gulp-livereload');
-const environments = require('gulp-environments');
-const nodemon      = require('nodemon');
-const less         = require('gulp-less');
-const autoprefixer = require('gulp-autoprefixer');
-const concat       = require('gulp-concat');
-const cssmin       = require('gulp-minify-css');
-const sourcemaps   = require('gulp-sourcemaps');
-const gulpwebpack  = require('gulp-webpack');
-const webpack      = require('webpack');
-const argv         = require('yargs').argv;
-const config       = require('./roastr.config.js');
-const development  = environments.development;
-const production   = environments.production;
-const path_server  = process.cwd();
-const app          = argv.app || 'main';
+const _             = require('lodash');
+const fs            = require('fs-extra');
+const path          = require('path');
+const gulp          = require('gulp');
+const gulpif        = require('gulp-if');
+const del           = require('del');
+const changed       = require('gulp-changed');
+const eslint        = require('gulp-eslint');
+const livereload    = require('gulp-livereload');
+const environments  = require('gulp-environments');
+const exec          = require('child_process').exec;
+const nodemon       = require('nodemon');
+const less          = require('gulp-less');
+const autoprefixer  = require('gulp-autoprefixer');
+const concat        = require('gulp-concat');
+const cssmin        = require('gulp-minify-css');
+const sourcemaps    = require('gulp-sourcemaps');
+const gulpwebpack   = require('gulp-webpack');
+const webpack       = require('webpack');
+const argv          = require('yargs').argv;
+const config        = require('./roastr.config.js');
+const development   = environments.development;
+const production    = environments.production;
+const path_server   = process.cwd();
+const fast          = argv.fast || false;
+const bootstrap_dir = './apps/main/public/bootstrap-4.0.0-alpha.3';
+const app           = argv.app || 'main';
 
 /**
  * Prefixes the build path to the given path
@@ -139,6 +142,33 @@ gulp.task('create', function() {
  */
 gulp.task('clean', function(cb) {
     del([pathBuild('**')], cb);
+});
+
+/**
+ *
+ */
+gulp.task('bootstrap', function (cb) {
+    function copy() {
+        gulp.src(bootstrap_dir + '/dist/css/*.css')
+            .pipe(gulp.dest(pathBuild('css')));
+        gulp.src(bootstrap_dir + '/dist/css/*.map')
+            .pipe(gulp.dest(pathBuild('css')));
+        //gulp.src(bootstrap_dir + '/dist/js/*.js')
+        //    .pipe(gulp.dest(pathBuild('scripts')));
+        cb();
+    }
+    
+    if (fast) {
+        copy();
+    } else {
+        var child = exec('cd ' + bootstrap_dir + ' && grunt', function (err) {
+            if (err) return cb(err);
+            copy();
+        });
+        child.stdout.on('data', function (chunk) {
+            console.log(chunk.trim());
+        });
+    }
 });
 
 /**
@@ -261,6 +291,9 @@ gulp.task('watch', ['default'], function() {
     gulp.watch([
         pathAppPublic('less/**/*.less')
     ], ['less']);
+    gulp.watch([
+        pathAppPublic('images/**/*')
+    ], ['assets']);
 });
 
 /**

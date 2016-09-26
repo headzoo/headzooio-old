@@ -1,0 +1,46 @@
+@import "_theme";
+
+.navbar-primary {
+  border-bottom: 1px solid @color-line;
+  padding: @spacer;
+  position: relative;
+  
+  a {
+    color: @color-primary;
+  }
+}
+
+.nav {
+  padding-left: 116px;
+}
+
+.navbar-nav .nav-item + .nav-item {
+  margin-left: 2rem;
+}
+
+.navbar-brand {
+  position: absolute;
+  top: -24px;
+  left: 1rem;
+  
+  img {
+    height: 102px;
+  }
+}
+
+.nav-outgoing {
+  
+  a {
+    margin-right: @spacer;
+    color: @color-primary;
+    transition: all 0.5s;
+    
+    &:hover {
+      color: @color-highlight;
+    }
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

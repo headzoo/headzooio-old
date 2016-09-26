@@ -1,0 +1,41 @@
+@import "_theme";
+
+.post {
+  border-bottom: 1px solid @color-line;
+  padding: @spacer 0;
+  
+  &:first-child {
+    padding-top: 0;
+  }
+  
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.post-head {
+  margin-bottom: @spacer / 2;
+}
+
+.post-title {
+  margin-bottom: 0;
+  line-height: 1.8rem;
+}
+
+.post-date {
+  font-size: 0.8rem;
+  color: lighten(@color-primary, 30%);
+  
+  .fa-clock-o {
+    margin-right: 0.2rem;
+    font-size: 0.7rem;
+  }
+}
+
+.post-content {
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
