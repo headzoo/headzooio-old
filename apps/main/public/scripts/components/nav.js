@@ -14,13 +14,16 @@ const Nav = React.createClass({
                 </Link>
                 <ul className="nav navbar-nav">
                     <li className="nav-item">
-                        <Link className="nav-link" to="/">Work</Link>
+                        <Link className="nav-link" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/">About</Link>
+                        <Link className="nav-link" to="/projects">Projects</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/">Contact</Link>
+                        <Link className="nav-link" to="/about">About</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/contact">Contact</Link>
                     </li>
                 </ul>
                 <div className="nav-outgoing pull-xs-right">

@@ -60,7 +60,10 @@
 	        Route,
 	        { name: 'Index', path: '/', component: __webpack_require__(235) },
 	        React.createElement(IndexRoute, { name: 'Home', component: __webpack_require__(258) }),
-	        React.createElement(Route, { name: 'post', path: '/posts/*', component: __webpack_require__(370) })
+	        React.createElement(Route, { name: 'post', path: '/posts/*', component: __webpack_require__(370) }),
+	        React.createElement(Route, { name: 'about', path: '/about', component: __webpack_require__(371) }),
+	        React.createElement(Route, { name: 'contact', path: '/contact', component: __webpack_require__(372) }),
+	        React.createElement(Route, { name: 'projects', path: '/projects', component: __webpack_require__(373) })
 	    )
 	), document.getElementById('mount'));
 
@@ -28598,7 +28601,7 @@
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
 	                        { className: 'nav-link', to: '/' },
-	                        'Work'
+	                        'Home'
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -28606,7 +28609,16 @@
 	                    { className: 'nav-item' },
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { className: 'nav-link', to: '/' },
+	                        { className: 'nav-link', to: '/projects' },
+	                        'Projects'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'li',
+	                    { className: 'nav-item' },
+	                    _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { className: 'nav-link', to: '/about' },
 	                        'About'
 	                    )
 	                ),
@@ -28615,7 +28627,7 @@
 	                    { className: 'nav-item' },
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { className: 'nav-link', to: '/' },
+	                        { className: 'nav-link', to: '/contact' },
 	                        'Contact'
 	                    )
 	                )
@@ -64529,6 +64541,108 @@
 	});
 
 	module.exports = PostPage;
+
+/***/ },
+/* 371 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reflux = __webpack_require__(236);
+
+	var _reflux2 = _interopRequireDefault(_reflux);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var AboutPage = _react2.default.createClass({
+	    displayName: 'AboutPage',
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'section',
+	            null,
+	            _react2.default.createElement(
+	                'h1',
+	                null,
+	                'About'
+	            )
+	        );
+	    }
+	});
+
+	module.exports = AboutPage;
+
+/***/ },
+/* 372 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reflux = __webpack_require__(236);
+
+	var _reflux2 = _interopRequireDefault(_reflux);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ContactPage = _react2.default.createClass({
+	    displayName: 'ContactPage',
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'section',
+	            null,
+	            _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Contact'
+	            )
+	        );
+	    }
+	});
+
+	module.exports = ContactPage;
+
+/***/ },
+/* 373 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reflux = __webpack_require__(236);
+
+	var _reflux2 = _interopRequireDefault(_reflux);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ProjectsPage = _react2.default.createClass({
+	    displayName: 'ProjectsPage',
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'section',
+	            null,
+	            _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Projects'
+	            )
+	        );
+	    }
+	});
+
+	module.exports = ProjectsPage;
 
 /***/ }
 /******/ ]);
