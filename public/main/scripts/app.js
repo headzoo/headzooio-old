@@ -28941,9 +28941,18 @@
 	        return _react2.default.createElement(
 	            'section',
 	            null,
-	            this.state.posts.map(function (post, i) {
-	                return _react2.default.createElement(_post6.default, { key: i, post: post, summary: true });
-	            })
+	            _react2.default.createElement(
+	                'small',
+	                { className: 'tagline' },
+	                'Sean Hickey - A funkadelic coding monk on the path to engineering nirvana. Full stack web developer & U.S. Marine.'
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'posts' },
+	                this.state.posts.map(function (post, i) {
+	                    return _react2.default.createElement(_post6.default, { key: i, post: post, summary: true });
+	                })
+	            )
 	        );
 	    }
 	});

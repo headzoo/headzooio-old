@@ -20,9 +20,14 @@ var HomePage = React.createClass({
     render: function () {
         return (
             <section>
-                {this.state.posts.map(function(post, i) {
-                    return <Post key={i} post={post} summary={true} />;
-                })}
+                <small className="tagline">
+                    Sean Hickey - A funkadelic coding monk on the path to engineering nirvana. Full stack web developer &amp; U.S. Marine.
+                </small>
+                <div className="posts">
+                    {this.state.posts.map(function(post, i) {
+                        return <Post key={i} post={post} summary={true} />;
+                    })}
+                </div>
             </section>
         )
     }
