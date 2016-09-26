@@ -64508,11 +64508,7 @@
 	    },
 
 	    render: function render() {
-	        return _react2.default.createElement(
-	            'div',
-	            null,
-	            _react2.default.createElement(_post6.default, { post: this.state.post })
-	        );
+	        return _react2.default.createElement(_post6.default, { post: this.state.post });
 	    }
 	});
 

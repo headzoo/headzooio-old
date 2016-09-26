@@ -19,9 +19,7 @@ const PostPage = React.createClass({
     
     render: function () {
         return (
-            <div>
-                <Post post={this.state.post} />
-            </div>
+            <Post post={this.state.post} />
         )
     }
 });
