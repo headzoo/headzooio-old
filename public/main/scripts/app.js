@@ -29070,7 +29070,7 @@
 	                dangerouslySetInnerHTML: this.createContent(post.content) }),
 	            this.props.summary ? _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: '/posts/' + post.permalink },
+	                { to: '/posts/' + post.permalink + '#read-more' },
 	                'Read More...'
 	            ) : null
 	        );
@@ -29078,11 +29078,27 @@
 
 	    createContent: function createContent(html) {
 	        if (!html) return null;
+
+	        html = html.trim();
+	        html = html.replace(/\n\r?/g, "\n");
+	        html = html.replace('<!--more-->', '<div id="read-more"></div>');
+
 	        if (this.props.summary) {
-	            html = html.split("\n")[0];
+	            if (html.indexOf('<div id="read-more"></div>') !== -1) {
+	                html = html.split('<div id="read-more"></div>')[0];
+	            } else {
+	                html = html.split("\n")[0];
+	            }
 	        }
 
-	        html = '<p>' + html.replace(/\n/g, '</p><p>');
+	        var lines = html.split(/\n/g);
+	        html = lines.map(function (line) {
+	            line = line.trim();
+	            if (line.indexOf('<') !== 0) {
+	                line = '<p>' + line + '</p>';
+	            }
+	            return line;
+	        }).join("\n");
 
 	        return { __html: html };
 	    }

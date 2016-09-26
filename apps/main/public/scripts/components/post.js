@@ -38,7 +38,7 @@ const Post = React.createClass({
                     dangerouslySetInnerHTML={this.createContent(post.content)} />
                 
                 {this.props.summary
-                ? <Link to={`/posts/${post.permalink}`}>Read More...</Link>
+                ? <Link to={`/posts/${post.permalink}#read-more`}>Read More...</Link>
                 : null}
             </article>
         )
@@ -46,11 +46,27 @@ const Post = React.createClass({
     
     createContent: function(html) {
         if (!html) return null;
+        
+        html = html.trim();
+        html = html.replace(/\n\r?/g, "\n");
+        html = html.replace('<!--more-->', '<div id="read-more"></div>');
+        
         if (this.props.summary) {
-            html = html.split("\n")[0];
+            if (html.indexOf('<div id="read-more"></div>') !== -1) {
+                html = html.split('<div id="read-more"></div>')[0];
+            } else {
+                html = html.split("\n")[0];
+            }
         }
         
-        html = ('<p>' + html.replace(/\n/g, '</p><p>'));
+        let lines = html.split(/\n/g);
+        html = lines.map(function(line) {
+            line = line.trim();
+            if (line.indexOf('<') !== 0) {
+                line = `<p>${line}</p>`;
+            }
+            return line;
+        }).join("\n");
         
         return {__html: html};
     }
