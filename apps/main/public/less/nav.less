@@ -6,19 +6,33 @@
   padding: 0;
 }
 
-.navbar-nav .nav-link {
-  color: @color-primary;
-  padding: @spacer;
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s ease-in-out;
+.navbar-nav {
+
+  .nav-item.active {
+    .nav-link {
+      border-bottom: 2px solid @color-highlight;
+    }
+  }
   
-  &:hover {
-    border-bottom: 2px solid @color-highlight;
+  .nav-link {
+    color: @color-primary;
+    padding: @spacer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+
+    @media (max-width: 736px) {
+      padding: 0.5rem 0.25rem;
+      font-size: 0.8rem;
+    }
+
+    &:hover {
+      border-bottom: 2px solid @color-highlight;
+    }
   }
 }
 
 .navbar-nav .nav-item + .nav-item {
-  margin-left: 2rem;
+  margin-left: 0;
 }
 
 .nav-outgoing {

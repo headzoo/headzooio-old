@@ -27113,13 +27113,14 @@
 	    displayName: 'Layout',
 
 	    render: function render() {
+
 	        return _react2.default.createElement(
 	            'div',
 	            { className: 'container' },
 	            _react2.default.createElement(
 	                'div',
 	                { id: 'main' },
-	                _react2.default.createElement(_nav2.default, null),
+	                _react2.default.createElement(_nav2.default, { active: this.props.location.pathname }),
 	                _react2.default.createElement(
 	                    'div',
 	                    { id: 'content', className: 'container' },
@@ -28583,53 +28584,38 @@
 	var Nav = _react2.default.createClass({
 	    displayName: 'Nav',
 
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            active: '/'
+	        };
+	    },
+
 	    render: function render() {
+
+	        var self = this;
+	        var main = [{ path: '/', label: 'Home' }, { path: '/projects', label: 'Projects' }, { path: '/about', label: 'About' }, { path: '/contact', label: 'Contact' }];
+
 	        return _react2.default.createElement(
 	            'nav',
 	            { className: 'navbar navbar-primary' },
 	            _react2.default.createElement(
 	                'ul',
 	                { className: 'nav navbar-nav' },
-	                _react2.default.createElement(
-	                    'li',
-	                    { className: 'nav-item' },
-	                    _react2.default.createElement(
-	                        _reactRouter.Link,
-	                        { className: 'nav-link', to: '/' },
-	                        'Home'
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'li',
-	                    { className: 'nav-item' },
-	                    _react2.default.createElement(
-	                        _reactRouter.Link,
-	                        { className: 'nav-link', to: '/projects' },
-	                        'Projects'
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'li',
-	                    { className: 'nav-item' },
-	                    _react2.default.createElement(
-	                        _reactRouter.Link,
-	                        { className: 'nav-link', to: '/about' },
-	                        'About'
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'li',
-	                    { className: 'nav-item' },
-	                    _react2.default.createElement(
-	                        _reactRouter.Link,
-	                        { className: 'nav-link', to: '/contact' },
-	                        'Contact'
-	                    )
-	                )
+	                main.map(function (item, i) {
+	                    return _react2.default.createElement(
+	                        'li',
+	                        { key: i, className: self.getNavClasses(item.path), onMouseEnter: self.onMouseEnter, onMouseLeave: self.onMouseLeave },
+	                        _react2.default.createElement(
+	                            _reactRouter.Link,
+	                            { className: 'nav-link', to: item.path },
+	                            item.label
+	                        )
+	                    );
+	                })
 	            ),
 	            _react2.default.createElement(
 	                'ul',
-	                { className: 'nav navbar-nav nav-outgoing pull-xs-right' },
+	                { className: 'nav navbar-nav nav-outgoing pull-xs-left pull-lg-right' },
 	                _react2.default.createElement(
 	                    'li',
 	                    { className: 'nav-item' },
@@ -28650,6 +28636,32 @@
 	                )
 	            )
 	        );
+	    },
+
+	    onMouseEnter: function onMouseEnter() {
+	        $('.nav-item').each(function (i, item) {
+	            item = $(item);
+	            if (item.hasClass('active')) {
+	                item.removeClass('active').addClass('active-off');
+	            }
+	        });
+	    },
+
+	    onMouseLeave: function onMouseLeave() {
+	        $('.nav-item').each(function (i, item) {
+	            item = $(item);
+	            if (item.hasClass('active-off')) {
+	                item.removeClass('active-off').addClass('active');
+	            }
+	        });
+	    },
+
+	    getNavClasses: function getNavClasses(pathname) {
+	        var classes = 'nav-item';
+	        if (pathname === this.props.active) {
+	            classes += ' active';
+	        }
+	        return classes;
 	    }
 	});
 

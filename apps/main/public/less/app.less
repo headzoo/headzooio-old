@@ -17,17 +17,26 @@ footer {
   min-height: 100%;
   margin: 60px auto 80px;
   box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  
+  @media (max-width: 736px) {
+    margin: 0;
+  }
 }
 
 #content {
   padding-top: 0.5rem;
+
+  @media (max-width: 736px) {
+    padding: 0.25rem;
+  }
 }
 
 .container {
   padding: @spacer;
-
-  @media (min-width: 1200px) {
-    max-width: 980px;
+  max-width: 980px;
+  
+  @media (max-width: 736px) {
+    padding: 0;
   }
 }
 

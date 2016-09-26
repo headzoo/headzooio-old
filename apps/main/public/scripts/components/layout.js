@@ -7,10 +7,11 @@ import Footer from './footer';
 
 const Layout = React.createClass({
     render: function () {
+        
         return (
             <div className="container">
                 <div id="main">
-                    <Nav />
+                    <Nav active={this.props.location.pathname} />
                     <div id="content" className="container">
                         {this.props.children}
                     </div>

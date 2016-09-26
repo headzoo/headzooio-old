@@ -1,8 +1,8 @@
 'use strict';
 
-var Reflux = require('reflux');
+const Reflux = require('reflux');
 
-var PostActions = Reflux.createActions({
+const PostActions = Reflux.createActions({
     page: {children: ['done', 'fail']},
     fetch: {children: ['done', 'fail']}
 });

@@ -1,7 +1,7 @@
 'use strict';
 
-var Reflux      = require('reflux');
-var PostActions = require('../actions/post');
+const Reflux      = require('reflux');
+const PostActions = require('../actions/post');
 
 module.exports = Reflux.createStore({
     listenables: [PostActions],

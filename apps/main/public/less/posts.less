@@ -16,6 +16,10 @@
     border-bottom: 0;
     padding-bottom: 0;
   }
+  
+  img {
+    max-width: 100%;
+  }
 }
 
 .post-head {
@@ -24,6 +28,10 @@
 
 .post-title {
   margin-bottom: 0;
+
+  @media (max-width: 736px) {
+    font-size: 1.2rem;
+  }
 }
 
 .post-date {
@@ -38,6 +46,11 @@
 
 .post-content {
   font-size: 1.1rem;
+  
+  @media (max-width: 736px) {
+    font-size: 1rem;
+    text-align: justify;
+  }
   
   p {
     margin-bottom: 1rem;
