@@ -17,6 +17,7 @@
   .nav-link {
     color: @color-primary;
     padding: @spacer;
+    text-transform: uppercase;
     border-bottom: 2px solid transparent;
     transition: all 0.2s ease-in-out;
 
@@ -36,7 +37,22 @@
 }
 
 .nav-outgoing {
-  .nav-item:last-child {
-    margin-left: 0;
+  font-size: 1.2rem;
+  
+  .nav-item {
+    position: relative;
+    width: 4rem;
+    height: 3rem;
+  }
+  
+  .nav-link {
+    color: @color-link;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    
+    &:hover {
+      border-bottom: none;
+    }
   }
 }

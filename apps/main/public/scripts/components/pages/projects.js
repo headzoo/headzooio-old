@@ -6,7 +6,7 @@ import Reflux   from 'reflux';
 var ProjectsPage = React.createClass({
     render: function () {
         return (
-            <section>
+            <section className="inner-content">
                 <h1>Projects</h1>
             </section>
         )

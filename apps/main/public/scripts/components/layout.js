@@ -12,11 +12,11 @@ const Layout = React.createClass({
             <div className="container">
                 <div id="main">
                     <Nav active={this.props.location.pathname} />
-                    <div id="content" className="container">
+                    <div id="content">
                         {this.props.children}
                     </div>
                     <div className="clearfix"></div>
-                    <Footer />
+                    <Footer className="inner-content" />
                 </div>
             </div>
         )

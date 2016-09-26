@@ -23,7 +23,7 @@
 }
 
 .post-head {
-  margin-bottom: @spacer / 2;
+  margin-bottom: 0.25rem;
 }
 
 .post-title {
@@ -36,10 +36,10 @@
 
 .post-date {
   font-size: 0.8rem;
-  color: lighten(@color-primary, 30%);
+  color: @color-muted;
   
   .fa-clock-o {
-    margin-right: 0.2rem;
+    margin-right: 0.3rem;
     font-size: 0.7rem;
   }
 }
@@ -59,15 +59,21 @@
       margin-bottom: 0;
     }
   }
-
+  
   blockquote {
     padding: 5px 30px 5px 25px;
     margin: 15px 0;
-    border-left: 5px solid #eee;
+    border-left: 5px solid lighten(@color-muted, 30%);
     
     p {
       margin-bottom: 0;
-      color: #7a7a7a;
+      color: @color-muted;
     }
   }
+}
+
+.post-leader-image {
+  float: left;
+  max-width: 40% !important;
+  margin-right: 0.5rem;
 }

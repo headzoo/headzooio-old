@@ -19,7 +19,9 @@ const PostPage = React.createClass({
     
     render: function () {
         return (
-            <Post post={this.state.post} />
+            <section className="inner-content">
+                <Post post={this.state.post} />
+            </section>
         )
     }
 });

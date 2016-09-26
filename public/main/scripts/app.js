@@ -27123,11 +27123,11 @@
 	                _react2.default.createElement(_nav2.default, { active: this.props.location.pathname }),
 	                _react2.default.createElement(
 	                    'div',
-	                    { id: 'content', className: 'container' },
+	                    { id: 'content' },
 	                    this.props.children
 	                ),
 	                _react2.default.createElement('div', { className: 'clearfix' }),
-	                _react2.default.createElement(_footer2.default, null)
+	                _react2.default.createElement(_footer2.default, { className: 'inner-content' })
 	            )
 	        );
 	    }
@@ -28621,8 +28621,8 @@
 	                    { className: 'nav-item' },
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'https://github.com/headzoo', className: 'nav-link', title: 'Github' },
-	                        _react2.default.createElement(_reactAfac2.default, { name: 'github' })
+	                        { href: 'https://twitter.com/WebSeanHickey', className: 'nav-link', title: 'Twitter' },
+	                        _react2.default.createElement(_reactAfac2.default, { name: 'twitter', size: '2x' })
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -28630,8 +28630,8 @@
 	                    { className: 'nav-item' },
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'https://twitter.com/WebSeanHickey', className: 'nav-link', title: 'Twitter' },
-	                        _react2.default.createElement(_reactAfac2.default, { name: 'twitter' })
+	                        { href: 'https://github.com/headzoo', className: 'nav-link', title: 'Github' },
+	                        _react2.default.createElement(_reactAfac2.default, { name: 'github', size: '2x' })
 	                    )
 	                )
 	            )
@@ -28954,13 +28954,14 @@
 	            'section',
 	            null,
 	            _react2.default.createElement(
-	                'small',
-	                { className: 'tagline' },
-	                'Sean Hickey - A funkadelic coding monk on the path to engineering nirvana. Full stack web developer & U.S. Marine.'
+	                'div',
+	                { className: 'tagline inner-content' },
+	                _react2.default.createElement('img', { src: '/images/avatar-tiny.png', className: 'avatar' }),
+	                'Hi, I\'m Sean. A funkadelic coding monk on the path to engineering nirvana. Full stack web developer and U.S. Marine.'
 	            ),
 	            _react2.default.createElement(
 	                'div',
-	                { className: 'posts' },
+	                { className: 'posts inner-content' },
 	                this.state.posts.map(function (post, i) {
 	                    return _react2.default.createElement(_post6.default, { key: i, post: post, summary: true });
 	                })
@@ -29115,7 +29116,8 @@
 	            this.props.summary ? _react2.default.createElement(
 	                _reactRouter.Link,
 	                { to: '/posts/' + post.permalink + '#read-more' },
-	                'Read More...'
+	                'Read More ',
+	                _react2.default.createElement(_reactAfac2.default, { name: 'angle-right' })
 	            ) : null
 	        );
 	    },
@@ -64568,7 +64570,11 @@
 	    },
 
 	    render: function render() {
-	        return _react2.default.createElement(_post6.default, { post: this.state.post });
+	        return _react2.default.createElement(
+	            'section',
+	            { className: 'inner-content' },
+	            _react2.default.createElement(_post6.default, { post: this.state.post })
+	        );
 	    }
 	});
 
@@ -64596,7 +64602,7 @@
 	    render: function render() {
 	        return _react2.default.createElement(
 	            'section',
-	            null,
+	            { className: 'inner-content' },
 	            _react2.default.createElement(
 	                'h1',
 	                null,
@@ -64630,7 +64636,7 @@
 	    render: function render() {
 	        return _react2.default.createElement(
 	            'section',
-	            null,
+	            { className: 'inner-content' },
 	            _react2.default.createElement(
 	                'h1',
 	                null,
@@ -64664,7 +64670,7 @@
 	    render: function render() {
 	        return _react2.default.createElement(
 	            'section',
-	            null,
+	            { className: 'inner-content' },
 	            _react2.default.createElement(
 	                'h1',
 	                null,

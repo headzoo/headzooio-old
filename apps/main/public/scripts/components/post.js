@@ -38,7 +38,7 @@ const Post = React.createClass({
                     dangerouslySetInnerHTML={this.createContent(post.content)} />
                 
                 {this.props.summary
-                ? <Link to={`/posts/${post.permalink}#read-more`}>Read More...</Link>
+                ? (<Link to={`/posts/${post.permalink}#read-more`}>Read More <Icon name="angle-right" /></Link>)
                 : null}
             </article>
         )

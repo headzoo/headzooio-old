@@ -35,13 +35,13 @@ const Nav = React.createClass({
                 </ul>
                 <ul className="nav navbar-nav nav-outgoing pull-xs-left pull-lg-right">
                     <li className="nav-item">
-                        <a href="https://github.com/headzoo" className="nav-link" title="Github">
-                            <Icon name="github" />
+                        <a href="https://twitter.com/WebSeanHickey" className="nav-link" title="Twitter">
+                            <Icon name="twitter" size="2x" />
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a href="https://twitter.com/WebSeanHickey" className="nav-link" title="Twitter">
-                            <Icon name="twitter" />
+                        <a href="https://github.com/headzoo" className="nav-link" title="Github">
+                            <Icon name="github" size="2x" />
                         </a>
                     </li>
                 </ul>
