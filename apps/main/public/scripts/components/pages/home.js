@@ -20,10 +20,10 @@ var HomePage = React.createClass({
     render: function () {
         return (
             <section>
-                <div className="tagline inner-content">
+                <h1 className="tagline inner-content">
                     <img src="/images/avatar-tiny.png" className="avatar" />
                     Hi, I'm Sean. A funkadelic coding monk on the path to engineering nirvana. Full stack web developer and U.S. Marine.
-                </div>
+                </h1>
                 <div className="posts inner-content">
                     {this.state.posts.map(function(post, i) {
                         return <Post key={i} post={post} summary={true} />;

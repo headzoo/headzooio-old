@@ -28954,7 +28954,7 @@
 	            'section',
 	            null,
 	            _react2.default.createElement(
-	                'div',
+	                'h1',
 	                { className: 'tagline inner-content' },
 	                _react2.default.createElement('img', { src: '/images/avatar-tiny.png', className: 'avatar' }),
 	                'Hi, I\'m Sean. A funkadelic coding monk on the path to engineering nirvana. Full stack web developer and U.S. Marine.'
