@@ -29061,7 +29061,7 @@
 	                    _react2.default.createElement(
 	                        _reactMoment2.default,
 	                        { fromNow: true, ago: true },
-	                        post.date
+	                        post.published_at
 	                    )
 	                )
 	            ),

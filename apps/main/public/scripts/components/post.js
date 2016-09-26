@@ -30,7 +30,7 @@ const Post = React.createClass({
                     </h2>
                     <div className="post-date">
                         <Icon name="clock-o" />
-                        <Moment fromNow ago>{post.date}</Moment>
+                        <Moment fromNow ago>{post.published_at}</Moment>
                     </div>
                 </div>
                 <div
