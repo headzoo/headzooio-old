@@ -2,45 +2,37 @@
 
 .navbar-primary {
   border-bottom: 1px solid @color-line;
-  padding: @spacer;
   position: relative;
-  
-  a {
-    color: @color-primary;
-  }
+  padding: 0;
 }
 
-.nav {
-  padding-left: 116px;
+.navbar-nav .nav-link {
+  color: @color-primary;
+  padding: @spacer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    border-bottom: 2px solid @color-highlight;
+  }
 }
 
 .navbar-nav .nav-item + .nav-item {
   margin-left: 2rem;
 }
 
-.navbar-brand {
-  position: absolute;
-  top: -24px;
-  left: 1rem;
-  
-  img {
-    height: 102px;
-  }
-}
-
 .nav-outgoing {
+
+  .nav-item:last-child {
+    margin-left: 0;
+  }
   
-  a {
-    margin-right: @spacer;
+  .nav-link {
     color: @color-primary;
-    transition: all 0.5s;
+    transition: all 0.2s;
     
     &:hover {
       color: @color-highlight;
-    }
-    
-    &:last-child {
-      margin-right: 0;
     }
   }
 }

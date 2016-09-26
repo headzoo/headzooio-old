@@ -28588,11 +28588,6 @@
 	            'nav',
 	            { className: 'navbar navbar-primary' },
 	            _react2.default.createElement(
-	                _reactRouter.Link,
-	                { className: 'navbar-brand', to: '/' },
-	                _react2.default.createElement('img', { src: '/images/avatar.png' })
-	            ),
-	            _react2.default.createElement(
 	                'ul',
 	                { className: 'nav navbar-nav' },
 	                _react2.default.createElement(
@@ -28633,10 +28628,26 @@
 	                )
 	            ),
 	            _react2.default.createElement(
-	                'div',
-	                { className: 'nav-outgoing pull-xs-right' },
-	                _react2.default.createElement(_reactAfac2.default, { href: 'https://github.com/headzoo', name: 'github', size: '2x' }),
-	                _react2.default.createElement(_reactAfac2.default, { href: 'https://twitter.com/WebSeanHickey', name: 'twitter', size: '2x' })
+	                'ul',
+	                { className: 'nav navbar-nav nav-outgoing pull-xs-right' },
+	                _react2.default.createElement(
+	                    'li',
+	                    { className: 'nav-item' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'https://github.com/headzoo', className: 'nav-link' },
+	                        _react2.default.createElement(_reactAfac2.default, { name: 'github' })
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'li',
+	                    { className: 'nav-item' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'https://twitter.com/WebSeanHickey', className: 'nav-link' },
+	                        _react2.default.createElement(_reactAfac2.default, { name: 'twitter' })
+	                    )
+	                )
 	            )
 	        );
 	    }

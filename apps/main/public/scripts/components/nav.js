@@ -9,9 +9,6 @@ const Nav = React.createClass({
     render: function () {
         return (
             <nav className="navbar navbar-primary">
-                <Link className="navbar-brand" to="/">
-                    <img src="/images/avatar.png" />
-                </Link>
                 <ul className="nav navbar-nav">
                     <li className="nav-item">
                         <Link className="nav-link" to="/">Home</Link>
@@ -26,10 +23,18 @@ const Nav = React.createClass({
                         <Link className="nav-link" to="/contact">Contact</Link>
                     </li>
                 </ul>
-                <div className="nav-outgoing pull-xs-right">
-                    <Icon href="https://github.com/headzoo" name="github" size="2x" />
-                    <Icon href="https://twitter.com/WebSeanHickey" name="twitter" size="2x" />
-                </div>
+                <ul className="nav navbar-nav nav-outgoing pull-xs-right">
+                    <li className="nav-item">
+                        <a href="https://github.com/headzoo" className="nav-link">
+                            <Icon name="github" />
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="https://twitter.com/WebSeanHickey" className="nav-link">
+                            <Icon name="twitter" />
+                        </a>
+                    </li>
+                </ul>
             </nav>
         )
     }
