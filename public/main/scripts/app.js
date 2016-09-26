@@ -28635,7 +28635,7 @@
 	                    { className: 'nav-item' },
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'https://github.com/headzoo', className: 'nav-link' },
+	                        { href: 'https://github.com/headzoo', className: 'nav-link', title: 'Github' },
 	                        _react2.default.createElement(_reactAfac2.default, { name: 'github' })
 	                    )
 	                ),
@@ -28644,7 +28644,7 @@
 	                    { className: 'nav-item' },
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'https://twitter.com/WebSeanHickey', className: 'nav-link' },
+	                        { href: 'https://twitter.com/WebSeanHickey', className: 'nav-link', title: 'Twitter' },
 	                        _react2.default.createElement(_reactAfac2.default, { name: 'twitter' })
 	                    )
 	                )

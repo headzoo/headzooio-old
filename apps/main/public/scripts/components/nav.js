@@ -25,12 +25,12 @@ const Nav = React.createClass({
                 </ul>
                 <ul className="nav navbar-nav nav-outgoing pull-xs-right">
                     <li className="nav-item">
-                        <a href="https://github.com/headzoo" className="nav-link">
+                        <a href="https://github.com/headzoo" className="nav-link" title="Github">
                             <Icon name="github" />
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a href="https://twitter.com/WebSeanHickey" className="nav-link">
+                        <a href="https://twitter.com/WebSeanHickey" className="nav-link" title="Twitter">
                             <Icon name="twitter" />
                         </a>
                     </li>
