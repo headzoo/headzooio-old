@@ -1,7 +1,7 @@
 {% extends "layout.html.tpl" %}
 {% block content %}
-    <section class="inner-content">
-        <h1>Contact</h1>
+    <section class="page inner-content">
+        <h1 class="page-title">Contact</h1>
         <p>
             Drop me a line and I'll try to respond as soon as possible.
         </p>
