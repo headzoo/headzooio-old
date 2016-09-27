@@ -1,6 +1,6 @@
 {% extends "layout.html.tpl" %}
 {% block content %}
-    <section class="inner-content">
+    <section class="posts">
         {% include "post.html.tpl" %}
     </section>
 {% endblock %}

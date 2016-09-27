@@ -1,12 +1,12 @@
 @import "_theme";
 
 .posts {
-
+  padding-top: 0;
 }
 
 .post {
   border-bottom: 1px solid @color-line;
-  padding: @spacer 0;
+  padding: @spacer + 0.5rem @spacer;
 
   &:first-child {
     padding-top: 0;
@@ -14,7 +14,6 @@
 
   &:last-child {
     border-bottom: 0;
-    padding-bottom: 0;
   }
   
   img {
@@ -23,11 +22,13 @@
 }
 
 .post-head {
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .post-title {
   margin-bottom: 0;
+  font-size: 2rem;
+  line-height: 2.2rem;
 
   @media (max-width: 736px) {
     font-size: 1.2rem;
@@ -36,21 +37,12 @@
 
 .post-date {
   font-size: 0.8rem;
+  margin-left: 0.1rem;
   color: @color-muted;
-  
-  .fa-clock-o {
-    margin-right: 0.3rem;
-    font-size: 0.7rem;
-  }
 }
 
 .post-content {
-  font-size: 1.1rem;
-  
-  @media (max-width: 736px) {
-    font-size: 1rem;
-    text-align: justify;
-  }
+  text-align: justify;
   
   p {
     margin-bottom: 1rem;
@@ -73,7 +65,15 @@
 }
 
 .post-leader-image {
-  float: left;
-  max-width: 40% !important;
-  margin-right: 0.5rem;
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.post-read-more {
+  font-size: 0.9rem;
+  
+  .fa {
+    vertical-align: middle;
+  }
 }
