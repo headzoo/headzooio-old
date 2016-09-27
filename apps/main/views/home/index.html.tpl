@@ -1,8 +1,7 @@
 {% extends "layout.html.tpl" %}
 {% block content %}
     <section>
-        <h1 class="tagline inner-content">
-            <img src="/images/avatar-tiny.png" class="avatar" />
+        <h1 class="tagline">
             Hi, I'm Sean. A funkadelic coding monk, pragmatic full stack web developer, and U.S. Marine.
         </h1>
         <div class="posts">
