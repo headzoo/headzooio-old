@@ -263,7 +263,7 @@ gulp.task('lint', function() {
 gulp.task('serve', function() {
     nodemon({
         script: 'index.js',
-        ext: 'js,yml',
+        ext: 'js,yml,tpl',
         watch: [
             'config',
             'server',
