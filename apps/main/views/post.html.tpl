@@ -1,3 +1,4 @@
+{% set summary = summary|default %}
 <article class="post">
     <div class="post-head">
         <h2 class="post-title">
@@ -9,9 +10,9 @@
         </div>
     </div>
     <div class="post-content">
-        {{ post.content|safe }}
+        {{ post.content|html(summary)|safe }}
     </div>
-    {% if summary|default %}
+    {% if summary %}
         <a href="/posts/{{ post.permalink }}#read-more">Read More <span class="fa fa-angle-right"></span></a>
     {% endif %}
 </article>

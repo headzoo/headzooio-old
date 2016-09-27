@@ -13,7 +13,7 @@ container.factory('express.serialize', ['express.middleware'], function() {
     };
 });
 
-container.set('filter_html', function(html, summary) {
+container.set('template.html', ['template.filter'], function(html, summary) {
     html = html.trim();
     html = html.replace(/\n\r?/g, "\n");
     html = html.replace('<!--more-->', '<div id="read-more"></div>');
