@@ -12,7 +12,16 @@
         <link rel="stylesheet" href="/css/app{% if env == "production" %}.min{% endif %}.css">
     </head>
     <body>
-        <div id="mount"></div>
+        <div class="container">
+            <div id="main">
+                {% include "nav.html.tpl" %}
+                <div id="content">
+                    {% block content %}{% endblock %}
+                </div>
+                <div class="clearfix"></div>
+                {% include "footer.html.tpl" %}
+            </div>
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="/scripts/app{% if env == "production" %}.min{% endif %}.js"></script>
     </body>

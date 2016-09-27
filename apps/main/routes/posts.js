@@ -2,21 +2,19 @@
 
 module.exports = function(express, container) {
     
-    express.get('/api/posts', function(req, res, next) {
-        let page = req.query.page || 1;
-        
-        container.get('models.posts')
-            .fetchPage({page: page, pageSize: 5})
-            .then(res.serialize)
-            .catch(next);
-    });
+    let filterHTML = container.get('filter_html');
     
-    express.get('/api/post', function(req, res, next) {
-        let permalink = req.query.permalink;
+    express.get(/^\/posts\/(.+)/, function(req, res, next) {
+        let permalink = req.params[0];
         
         container.get('models.posts')
             .fetchByPermalink(permalink)
-            .then(res.serialize)
+            .then(function(post) {
+                post = post.serialize();
+                post.content = filterHTML(post.content, false);
+                
+                res.render('posts/index', {post});
+            })
             .catch(next);
     });
 };
