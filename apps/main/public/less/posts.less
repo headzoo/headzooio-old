@@ -1,6 +1,6 @@
 @import "_theme";
 
-.posts, .page {
+.posts {
   padding-top: 0;
 }
 
@@ -32,6 +32,10 @@
 
   @media (max-width: 736px) {
     font-size: 1.2rem;
+  }
+  
+  &.small {
+    font-size: 1.3rem;
   }
 }
 
@@ -71,5 +75,15 @@
   
   .fa {
     vertical-align: middle;
+  }
+}
+
+.post-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+  li {
+    margin-bottom: 0.5rem;
   }
 }
