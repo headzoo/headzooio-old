@@ -9,8 +9,13 @@ module.exports = function(express, container) {
         container.get('models.posts')
             .fetchPage({page: page, pageSize: 5})
             .then(function(posts) {
+                let pagination = posts.pagination;
+                
                 res.render('home/index', {
-                    posts: posts.serialize()
+                    posts : posts.serialize(),
+                    page  : pagination.page,
+                    pages : pagination.pageCount,
+                    route : '/'
                 });
             })
             .catch(next);

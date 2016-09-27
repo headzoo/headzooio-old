@@ -10,5 +10,6 @@
                 {% include "post.html.tpl" %}
             {% endfor %}
         </div>
+        {% include "pagination.html.tpl" %}
     </section>
 {% endblock %}
