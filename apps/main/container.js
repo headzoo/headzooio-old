@@ -1,6 +1,7 @@
 'use strict';
 
 const roastr    = require('roastr');
+const moment    = require('moment');
 const container = roastr.container;
 
 container.factory('express.serialize', ['express.middleware'], function() {
@@ -34,6 +35,10 @@ container.set('template.html', ['template.filter'], function(html, summary) {
     }).join("\n");
     
     return html;
+});
+
+container.set('template.moment_from_now', ['template.filter'], function(date) {
+    return moment(date).fromNow();
 });
 
 module.exports = container;

@@ -6,7 +6,7 @@
         </h2>
         <div class="post-date">
             <span class="fa fa-clock-o"></span>
-            <time>{{ post.published_at }}</time>
+            <time>{{ post.published_at|moment_from_now }}</time>
         </div>
     </div>
     <div class="post-content">
