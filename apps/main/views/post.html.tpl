@@ -5,7 +5,7 @@
             <a href="/posts/{{ post.permalink }}">{{ post.title }}</a>
         </h2>
         <div class="post-date">
-            Written <time>{{ post.published_at|moment_from_now }}</time>.
+            <time>{{ post.published_at|moment_format("MMMM Do YYYY") }}</time>
         </div>
     </div>
     <div class="post-content">

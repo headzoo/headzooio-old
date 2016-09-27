@@ -37,8 +37,8 @@ container.set('template.html', ['template.filter'], function(html, summary) {
     return html;
 });
 
-container.set('template.moment_from_now', ['template.filter'], function(date) {
-    return moment(date).fromNow();
+container.set('template.moment_format', ['template.filter'], function(date, format) {
+    return moment(date).format(format);
 });
 
 module.exports = container;
