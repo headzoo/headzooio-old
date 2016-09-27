@@ -4,6 +4,13 @@ const roastr    = require('roastr');
 const moment    = require('moment');
 const container = roastr.container;
 
+container.factory('mailer', function() {
+    let nodemailer = require('nodemailer');
+    let config     = container.get('config.nodemailer');
+    
+    return nodemailer.createTransport(config);
+});
+
 container.factory('express.serialize', ['express.middleware'], function() {
     return function(req, res, next) {
         res.serialize = function(obj) {

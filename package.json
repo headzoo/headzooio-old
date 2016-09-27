@@ -19,6 +19,7 @@
     "lodash": "^4.15.0",
     "moment": "^2.15.1",
     "mysql": "^2.11.1",
+    "nodemailer": "^2.6.4",
     "nunjucks": "^2.4.2",
     "react": "^15.3.0",
     "react-afac": "git+https://github.com/headzoo/react-afac.git#f5121aa",
