@@ -4,6 +4,8 @@ module.exports = function(express, container) {
     
     express.get('/contact', function(req, res) {
         
-        res.render('contact/index');
+        res.render('contact/index', {
+            title: 'Contact'
+        });
     });
 };

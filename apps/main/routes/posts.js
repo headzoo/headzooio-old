@@ -8,8 +8,10 @@ module.exports = function(express, container) {
         container.get('models.posts')
             .fetchByPermalink(permalink)
             .then(function(post) {
+                post = post.serialize();
                 res.render('posts/index', {
-                    post: post.serialize()
+                    title: post.title,
+                    post: post
                 });
             })
             .catch(next);
