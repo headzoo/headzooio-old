@@ -31,6 +31,7 @@
     "roastr": "/var/www/roastr",
     "socket.io": "^1.4.8",
     "socket.io-redis": "^1.0.0",
+    "sqlite3": "^3.1.4",
     "wait-until": "0.0.2",
     "winston": "^2.2.0"
   },
