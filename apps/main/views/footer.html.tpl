@@ -4,7 +4,7 @@
         and are licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
         Attribution-NonCommercial-ShareAlike 4.0 International License</a> except where explicitly stated otherwise.
     </div>
-    <div style="padding-top: 0.5rem;">
+    <div class="cc-image">
         <img src="/images/cc.jpg" />
     </div>
 </footer>
