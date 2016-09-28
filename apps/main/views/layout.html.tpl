@@ -23,7 +23,6 @@
                 <div id="content">
                     {% block content %}{% endblock %}
                 </div>
-                <div class="clearfix"></div>
                 {% include "footer.html.tpl" %}
             </div>
         </div>
