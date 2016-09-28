@@ -17,6 +17,7 @@ module.exports = function(express, container) {
         };
         
         res.render('contact/index', {
+            active: 'contact',
             title: 'Contact',
             alert: '',
             alert_type: 'success',
@@ -55,6 +56,7 @@ module.exports = function(express, container) {
         }
         if (errored) {
             return res.render('contact/index', {
+                active     : 'contact',
                 title      : 'Contact',
                 alert      : 'Please fix the errors below.',
                 alert_type : 'danger',
@@ -74,6 +76,7 @@ module.exports = function(express, container) {
         });
         
         res.render('contact/index', {
+            active     : 'contact',
             title      : 'Contact',
             alert      : 'Thank You!',
             alert_type : 'success',

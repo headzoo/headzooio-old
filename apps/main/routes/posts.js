@@ -8,6 +8,7 @@ module.exports = function(express, container) {
             .fetchAll()
             .then(function(posts) {
                 res.render('posts/index', {
+                    active: 'posts',
                     title: 'Posts',
                     posts: posts.serialize()
                 });
@@ -23,6 +24,7 @@ module.exports = function(express, container) {
             .then(function(post) {
                 post = post.serialize();
                 res.render('posts/post', {
+                    active: 'posts',
                     title: post.title,
                     post: post
                 });

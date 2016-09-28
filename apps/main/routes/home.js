@@ -12,6 +12,7 @@ module.exports = function(express, container) {
                 let pagination = posts.pagination;
                 
                 res.render('home/index', {
+                    active: 'home',
                     posts : posts.serialize(),
                     page  : pagination.page,
                     pages : pagination.pageCount,
