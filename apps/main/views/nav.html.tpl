@@ -10,19 +10,15 @@
             <a class="nav-link" href="/about">About</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
+            <a class="nav-link" href="https://twitter.com/WebSeanHickey">Twitter</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://github.com/headzoo">Github</a>
         </li>
     </ul>
-    <ul class="nav navbar-nav nav-outgoing pull-xs-left pull-lg-right">
+    <ul class="nav navbar-nav pull-xs-right">
         <li class="nav-item">
-            <a href="https://twitter.com/WebSeanHickey" class="nav-link" title="Twitter">
-                <span class="fa fa-twitter fa-2x"></span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="https://github.com/headzoo" class="nav-link" title="Github">
-                <span class="fa fa-github fa-2x"></span>
-            </a>
+            <a class="nav-link" href="/contact">Contact</a>
         </li>
     </ul>
 </nav>

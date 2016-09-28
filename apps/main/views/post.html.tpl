@@ -12,6 +12,6 @@
         {{ post.content|html(summary)|safe }}
     </div>
     {% if summary %}
-        <a href="/posts/{{ post.permalink }}#read-more" class="post-read-more">Read More <span class="fa fa-angle-right"></span></a>
+        <a href="/posts/{{ post.permalink }}#read-more" class="post-read-more">Read More &raquo;</a>
     {% endif %}
 </article>

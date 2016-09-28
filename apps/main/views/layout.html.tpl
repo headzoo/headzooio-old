@@ -13,7 +13,6 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <link rel="icon" href="/favicon.ico" type="images/x-icon" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="/css/bootstrap{% if env == "production" %}.min{% endif %}.css">
         <link rel="stylesheet" href="/css/app{% if env == "production" %}.min{% endif %}.css">
     </head>
