@@ -11,16 +11,6 @@ container.factory('mailer', function() {
     return nodemailer.createTransport(config);
 });
 
-container.factory('express.serialize', ['express.middleware'], function() {
-    return function(req, res, next) {
-        res.serialize = function(obj) {
-            return res.json(obj.serialize());
-        };
-        
-        next();
-    };
-});
-
 container.set('template.html', ['template.filter'], function(html, summary) {
     html = html.trim();
     html = html.replace(/\n\r?/g, "\n");
