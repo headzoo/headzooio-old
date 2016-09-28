@@ -10,8 +10,14 @@ module.exports = function(express, container) {
             '/2013/12/30/evolution': '/posts/2013/12/the-evolution-of-a-software-engineer',
             '/2014/01/01/art': '/posts/2014/01/is-programming-art'
         };
-        if (redirects[req.originalUrl] !== undefined) {
-            return res.redirect(301, redirects[req.originalUrl]);
+        
+        let path = req.originalUrl;
+        if (path.substr(path.length - 1, 1) === '/') {
+            path = path.substr(0, path.length - 1);
+        }
+        
+        if (redirects[path] !== undefined) {
+            return res.redirect(301, redirects[path]);
         }
         
         next();
