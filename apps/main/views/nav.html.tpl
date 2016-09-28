@@ -15,8 +15,11 @@
         <li class="nav-item">
             <a class="nav-link" href="https://github.com/headzoo">Github</a>
         </li>
+        <li class="nav-item hidden-md-up">
+            <a class="nav-link" href="/contact">Contact</a>
+        </li>
     </ul>
-    <ul class="nav navbar-nav pull-xs-right">
+    <ul class="nav navbar-nav pull-xs-right hidden-sm-down">
         <li class="nav-item">
             <a class="nav-link" href="/contact">Contact</a>
         </li>

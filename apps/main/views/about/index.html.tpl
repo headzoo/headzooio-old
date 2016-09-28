@@ -12,7 +12,7 @@
             I have extensive experience designing and building tube/video/image sites, with an emphasis on mobile design, including sites which handle and process 25,000 user uploaded images and videos each day. My portfolio also includes adult (XXX) websites, with more information available on request.
         </p>
         
-        <h2 class="page-title">My Skills</h2>
+        <h2 class="page-title">Skills</h2>
         <ul class="list-style-none">
             <li>PHP, Symfony, WordPress</li>
             <li>Javascript, Node, jQuery, React</li>
