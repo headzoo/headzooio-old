@@ -7,7 +7,7 @@ module.exports = function(express, container) {
         if (page < 1) page = 1;
         
         container.get('models.posts')
-            .fetchPage({page: page, pageSize: 5})
+            .fetchPage({page: page, pageSize: 3})
             .then(function(posts) {
                 let pagination = posts.pagination;
                 
