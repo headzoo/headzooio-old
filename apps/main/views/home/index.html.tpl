@@ -2,7 +2,7 @@
 {% block content %}
     <section>
         <h1 class="tagline">
-            Hi, I'm Sean. A funkadelic coding monk, pragmatic full stack web developer, and U.S. Marine.
+            Hi, I'm Sean. A pragmatic minimalist and funkadelic full stack coding monk.
         </h1>
         <div class="posts">
             {% set summary = true %}
