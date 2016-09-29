@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(models) {
+module.exports = function(models, container) {
     let Posts = models.add({
         tableName: 'posts'
     });
