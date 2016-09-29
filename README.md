@@ -13,6 +13,14 @@ gulp
 
 ### Running
 
+##### Development
+
+```sh
+gulp serve-watch
 ```
-node index.js
+
+##### Production
+
+```
+NODE_ENV=production node index.js
 ```
