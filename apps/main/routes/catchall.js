@@ -15,7 +15,6 @@ module.exports = function(express, container) {
         if (path.substr(path.length - 1, 1) === '/') {
             path = path.substr(0, path.length - 1);
         }
-        
         if (redirects[path] !== undefined) {
             return res.redirect(301, redirects[path]);
         }
