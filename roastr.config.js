@@ -2,7 +2,7 @@
 
 module.exports = {
     assets: {
-        sources: ['images', 'favicon.ico']
+        sources: ['images', 'react-headzoo-emoji', 'favicon.ico']
     },
     livereload: true,
     css: {

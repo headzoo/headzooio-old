@@ -3,3 +3,4 @@ node_modules
 public/main
 config
 logs
+apps/main/public/react-headzoo-emoji/images/
